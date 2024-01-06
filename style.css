@@ -1,0 +1,244 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&family=Roboto:wght@100&display=swap');
+
+
+  *{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ 
+ body {
+   font-family: 'Roboto', sans-serif;
+   font-size: 1rem;
+   background: whitesmoke;
+ }
+ 
+ 
+ button{
+   padding: 8px;
+   outline: none;
+   cursor: pointer;
+   border: 1px solid lightgray;
+   border-radius: 5px;
+   background: whitesmoke;
+ }
+ 
+ 
+ .delete-card{
+ position: absolute;
+ padding-left: 5px; /* Adjust as needed */
+   top: 2px; /* Adjust the top position as needed */
+   right: 70px; /* Adjust the right position as needed */
+   padding: 8px;
+   background-color: transparent; /* Adjust button color as needed */
+   outline: #1a1a1a;
+   color: rgb(245, 62, 65);
+   border: 1px;
+   border-radius: 20px;
+   cursor: pointer;
+ }
+ .edit-card {
+   position: absolute;
+   padding-right: 5px; /* Adjust as needed */
+   padding-left: 100px;
+   top: 2px; /* Adjust the top position as needed */
+   right: 5px; /* Adjust the right position as needed */
+   padding: 8px;
+   background-color: transparent; /* Adjust button color as needed */
+   outline: #1a1a1a;
+   color: rgb(29, 135, 241);
+   border: 1px;
+   border-radius: 20px;
+   cursor: pointer;
+ } 
+
+ .delete-card::before {
+   right: 20px;
+   padding-left: 10px; /* Adjust as needed */
+   content: "\f2ed"; /* Unicode for the trash icon in Font Awesome */
+   font-family: "Font Awesome 5 Free"; /* Font family for Font Awesome */
+   font-weight: 900; /* Font weight for Font Awesome */
+   position: relative;
+   left: -5px; /* Adjust as needed */
+ }
+ 
+ .edit-card::before {
+   content: "\f044"; /* Unicode for the edit icon in Font Awesome */
+   font-family: "Font Awesome 5 Free"; /* Font family for Font Awesome */
+   font-weight: 900; /* Font weight for Font Awesome */
+   position: absolute;
+   left: -10px; /* Adjust as needed */
+ }
+ 
+
+
+
+
+ button:hover{
+   background-color: rgba(0, 0, 0, 0.1);
+ }
+ 
+ .container{
+   width: 1280px;
+   margin: auto;
+ }
+ 
+ header{background-color: white;}
+ 
+ #header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   min-height: 70px;
+   padding: 0 20px;
+   background: white;
+ }
+ 
+ #header button{
+   font-family: inherit;
+   border: 1px solid blue;
+ }
+ 
+ #create_card{
+   display: none;
+   width: 370px;
+   margin:auto;
+   padding: 20px;
+   margin-top: 10px;
+   background: white;
+   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+ }
+ 
+ #create_card h2{
+   color: black;
+   text-align: center;
+ }
+ 
+ #create_card textarea{
+   width: 100%;
+   border-radius: 5px;
+   font-family: inherit;
+   border: 1px solid lightblue;
+   resize: none;
+ }
+ 
+ #create_card button{width: fit-content;}
+ 
+ #flashcards{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   width: 100%;
+   margin: auto;
+   margin-top: 10px;
+   padding: 0px 10px;
+ }
+ 
+ .flashcard{
+   width: 370px;
+   height: 200px;
+   word-wrap: break-word;
+   margin: 10px; 
+   background:rgb(255, 247, 237);
+   cursor: pointer;
+   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+   position: relative;
+ }
+ 
+ .flashcard h2{font-size: 1rem;}
+ 
+ .fa-minus{
+   top: 3%;
+   right: 2%;
+   position: absolute;
+   color: #1a1a1a;
+   transition: 0.3s ease-out;
+ }
+ 
+ .fa-minus:hover{color: blue;}
+ 
+ @media(max-width:1280px){
+   .container{width: 100%;}
+ }
+ 
+ @media(max-width:768px){
+   .flashcard{margin: auto;}
+ 
+   .flashcard{
+     margin-top: 10px;
+     margin-bottom: 10px;
+   }
+ }
+ 
+ @media(max-width:480px){
+   #header{
+     padding: 20px;
+     gap: 10px;
+     flex-direction: column;
+     align-items: center;
+   }
+ 
+   #create_card{width: 95%;}
+ 
+   .flashcard{width: 100%;}
+ 
+ }
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&family=Roboto:wght@100&display=swap');
+
+/* Your existing CSS code... */
+
+
+.flashcard {
+   margin-top: 550px;
+   margin-bottom: 300px;
+   margin-right: 28px;
+  position: absolute;
+  transform: translate(10px, 0px);
+}
+
+.flashcard:nth-child(n) {
+  z-index: -1;
+}
+
+.flashcard:nth-child(1) {
+  z-index: 3;
+}
+
+.flashcard:nth-child(2) {
+  z-index: 2;
+}
+
+.flashcard:nth-child(3) {
+  z-index: 1;
+}
+
+#prevButton {
+   color: white;
+   position: absolute;
+   left: 400px;
+   background-color: lightsalmon;
+}
+
+#nextButton{
+   position: sticky;
+   left: 1020px;
+   background-color:lightskyblue;
+   border: red;
+}
+
+#show_card_box{
+   position: sticky;
+   background-color:lightgreen;
+   border: red;
+
+}
+
+#delete_cards{
+   color: white;
+   position: sticky;
+   background-color:rgb(229, 29, 29);
+   border: red;
+
+}
