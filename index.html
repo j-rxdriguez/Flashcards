@@ -1,53 +1,57 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <link rel="stylesheet" type="text/css" href="style.css" /> 
-    <title>Flashcards</title>
-  </head>
-  <body>
-    <main>
-      <header>
-        <div class="container">
-          <div id="header">
-            <h1>Flashcards</h1>
-            <div>
-              <button id="show_card_box">Add new card</button>
-              <button id="delete_cards">Delete all cards</button>
-            </div>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Flashcards</title>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="container">
+        <div id="header">
+          <h1>Flashcards</h1>
+          <div>
+            <button id="add_card_button">Add new card</button> 
+            <button id="delete_cards">Delete all cards</button>
           </div>
         </div>
-      </header>
-      <section>
-        <div class="container">
-          <div id="create_card">
-            <h2>Create Flashcard</h2>
-            <label for="question">Question</label>
-            <textarea id="question" maxlength="280"></textarea>
-            <label for="answer" maxlength="280">Answer</label>
-            <br>
-            <textarea id="answer"></textarea>
-            <div>
-              <button id="save_card">Save</button> <button id="close_card_box">Close</button>
-            </div>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <div id="create_card">
+          <h2>Create Flashcard</h2>
+          <label for="question">Question</label> 
+          <textarea id="question" maxlength="280"></textarea> 
+          <label for="answer">Answer</label><br>
+          <textarea id="answer" maxlength="280"></textarea>
+          <div>
+            <button id="save_card">Save</button> 
+            <button id="close_card_box">Close</button>
           </div>
         </div>
-      </section>
-      <section>
-        <div class="container">
-          <div id="flashcards"></div>
-        </div>
-      </section>
-      <section>
-        <div class="container">
-          <div id="flashcard-container" class="flashcard-container"></div>
-          <div id="navigation-buttons">
-            <button id="prevButton">Previous </button>
-            <button id="nextButton">Next flashcard</button>
-          </div>
-        </div>
-      </section>
-    </main>
-    <script src="script.js"></script>
-  </body>
+      </div>
+    </section>
+    <article>
+      <div class="container">
+        <div id="flashcards"></div>
+      </div>
+    </article>
+    <article>
+      <div class="container">
+        <div id="flashcard-container" class="flashcard-container"></div>
+        <nav id="navigation-buttons">
+          <button id="prevButton">Previous</button> 
+          <button id="nextButton">Next flashcard</button>
+        </nav>
+      </div>
+    </article>
+    <section>
+      <button id="showAllCards">Show all flashcards</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
 </html>
+
