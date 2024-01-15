@@ -80,20 +80,20 @@ const flashcardApp = {
       const questionInput = document.querySelector("#question");
       const answerInput = document.querySelector("#answer");
   
-      // Populate the input fields with the existing values
+      // Fill fields with existing values
       questionInput.value = this.contentArray[editThisIndex].my_question;
       answerInput.value = this.contentArray[editThisIndex].my_answer;
   
-      // Hide the original flashcard
-      const flashcard = document.querySelectorAll(".flashcard")[editThisIndex];
+      // Removes the original flashcard by hiding it
+       const flashcard = document.querySelectorAll(".flashcard")[editThisIndex];
       flashcard.style.display = "hidden";
   
-          // Update the flashcard content on "Save"
+          // Updates flashcard info
       document.getElementById("save_card").addEventListener("click", () => {
       const updatedQuestion = questionInput.value;
       const updatedAnswer = answerInput.value;
 
-      // Update the existing flashcard
+      // Updates the info and alerts the user that theres now an empty flashcard left behind
       flashcard.querySelector("h2").textContent = updatedQuestion;
       flashcard.querySelector("h2").nextSibling.textContent = updatedAnswer;
       flashcard.style.display = "block";
@@ -104,16 +104,16 @@ const flashcardApp = {
       this.contentArray[editThisIndex].my_answer = updatedAnswer;
       localStorage.setItem('items', JSON.stringify(this.contentArray));
 
-      // Clear the input fields
+      // Clear the answer and question input fields
       questionInput.value = "";
       answerInput.value = "";
 
   
-        // Hide the create card box
+        // Hide create card box
         document.getElementById("create_card").style.display = "none";
       });
     },
-  
+  //buttons
     setupEventListeners: function () {
       const saveCardBtn = document.getElementById("save_card");
       const deleteCardsBtn = document.getElementById("delete_cards");
@@ -125,22 +125,22 @@ const flashcardApp = {
       showCardBoxBtn.addEventListener("click", this.showCardBox.bind(this));
       closeCardBoxBtn.addEventListener("click", this.closeCardBox.bind(this));
     },
-  
+  //delete ALL cards button
     deleteAllFlashcards: function () {
       localStorage.clear();
       document.getElementById('flashcards').innerHTML = '';
       this.contentArray = [];
     },
-  
+  //Currently not working
     showCardBox: function () {
       document.getElementById("create_card").style.display = "block";
     },
-  
+  //Hides input box (Create card)
     closeCardBox: function () {
       document.getElementById("create_card").style.display = "none";
     },
   };
-  
+  //Executes app after html is loaded
   document.addEventListener("DOMContentLoaded", function () {
     flashcardApp.init();
   });
@@ -177,7 +177,6 @@ const flashcardApp = {
       card.classList.toggle('flipped');
     });
   
-    // Optional: Allow deleting flashcards
     card.addEventListener('contextmenu', (event) => {
       event.preventDefault();
       card.remove();
@@ -220,7 +219,7 @@ const flashcardApp = {
   document.getElementById('nextButton').addEventListener('click', function () {
     // Hide the current card
     document.getElementsByClassName('flashcard')[currentCard].style.display = 'none';
-    // Show the next card
+    // Show the following card
     currentCard++;
     if (currentCard >= document.getElementsByClassName('flashcard').length) {
       currentCard = 0;
