@@ -12,8 +12,8 @@
         <div id="header">
           <h1>Flashcards</h1>
           <div>
-            <button id="add_card_button">Add new card</button> 
-            <button id="delete_cards">Delete all cards</button>
+            <button id="add_card_button" aria-label="Add new card">Add new card</button> 
+            <button id="delete_cards" aria-label="Delete all cards">Delete all cards</button>
           </div>
         </div>
       </div>
@@ -23,41 +23,41 @@
         <div id="create_card">
           <h2>Create Flashcard</h2>
           <label for="question">Question</label> 
-          <textarea id="question" maxlength="280"></textarea> 
+          <textarea id="question" maxlength="280" aria-labelledby="question"></textarea> 
           <label for="answer">Answer</label><br>
-          <textarea id="answer" maxlength="280"></textarea>
+          <textarea id="answer" maxlength="280" aria-labelledby="answer"></textarea>
           <div>
-            <button id="save_card">Save</button> 
-            <button id="close_card_box">Close</button>
+            <button id="save_card" aria-label="Save flashcard">Save</button> 
+            <button id="close_card_box" aria-label="Close flashcard box">Close</button>
           </div>
         </div>
       </div>
     </section>
     <article>
       <div class="container">
-        <div id="flashcards"></div>
+        <div id="flashcards" aria-live="polite"></div>
       </div>
     </article>
     <article>
       <div class="container">
-        <div id="flashcard-container" class="flashcard-container"></div>
+        <div id="flashcard-container" class="flashcard-container" aria-live="polite"></div>
         <nav id="navigation-buttons">
-          <button id="prevButton">Previous</button> 
-          <button id="nextButton">Next flashcard</button>
+          <button id="prevButton" aria-label="Previous flashcard">Previous</button> 
+          <button id="nextButton" aria-label="Next flashcard">Next flashcard</button>
         </nav>
       </div>
     </article>
     <section>
-      <button id="showAllCards">Show all flashcards</button>
-      <button id="saveFiles">Download</button>
+      <button id="showAllCards" aria-label="Show all flashcards">Show all flashcards</button>
+      <button id="saveFiles" aria-label="Download flashcards">Download</button>
     </section>
     <div class="vertical-section"></div>
     <footer>
       <div class="container">
       <div id="footer">
       <p>Upload Flashcards</p>
-      <input type="file" id="uploadJSON" accept=".json">
-                    
+      <label for="uploadJSON">Choose a JSON file to upload</label>
+      <input type="file" id="uploadJSON" accept=".json" aria-labelledby="uploadJSON">
       </div>
     </footer>
   </main>
