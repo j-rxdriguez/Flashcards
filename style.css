@@ -224,20 +224,25 @@ header{background-color: white;}
    background-color: lightskyblue;
 }
 
-#add_card_button{
-   position: sticky;
-   background-color:lightgreen;
-   font-weight: bold;
-
-
+#add_card_button {
+  position: sticky;
+  background-color: lightgreen;
+  font-weight: bold;
+  color: black;
+  padding: 12px 20px; 
+  font-size: 1.2rem;
 }
 
-#delete_cards{
-   color: white;
-   position: sticky;
-   font-weight: bold;
-   background-color:rgb(229, 29, 29);
+#delete_cards {
+  color: black;
+  position: sticky;
+  font-weight: bold;
+  background-color: rgb(229, 29, 29);
+  padding: 12px 20px;
+  font-size: 1.2rem;
 }
+
+
 
  #showAllCards {
    position: sticky; 
