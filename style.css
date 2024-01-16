@@ -207,7 +207,7 @@ header{background-color: white;}
 #prevButton {
    position: sticky;
    right: 65%;
-   color: white;
+   color: black;
    position: absolute;
    border-color: #1a1a1a;
    margin-right: 90px;
@@ -219,7 +219,7 @@ header{background-color: white;}
 #nextButton{
    left: 65%;
    position: sticky;
-   color: white;
+   color: black;
    position: absolute;
    margin-left: 90px;
    border-color: #1a1a1a;
