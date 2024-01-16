@@ -212,6 +212,8 @@ header{background-color: white;}
    border-color: #1a1a1a;
    margin-right: 90px;
    background-color: lightsalmon;
+   padding: 12px 20px;
+  font-size: 1.2rem;
 }
 
 #nextButton{
@@ -222,6 +224,8 @@ header{background-color: white;}
    margin-left: 90px;
    border-color: #1a1a1a;
    background-color: lightskyblue;
+   padding: 12px 20px;
+  font-size: 1.2rem;
 }
 
 #add_card_button {
@@ -254,6 +258,8 @@ header{background-color: white;}
    background-color: white;
    color: blueviolet;
    border-radius: 20px;
+   padding: 12px 20px;
+  font-size: 1.2rem;
  }
 
 #saveFiles {
@@ -266,6 +272,8 @@ header{background-color: white;}
   position: sticky;
   color: white;
   margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 1.2rem;
 }
 
 #uploadButton {
@@ -277,10 +285,12 @@ header{background-color: white;}
   background: red;
   left: 50%;
   margin-top: 20px; 
+  
 }
 
 #uploadButton:hover {
   background-color: rgba(0, 0, 0, 0.1);
+  
 }
 
 #footer {
@@ -295,3 +305,4 @@ header{background-color: white;}
   background: rgb(250, 249, 249);
   
 }
+
