@@ -1,6 +1,4 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&family=Roboto:wght@100&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&family=Roboto:wght@100&display=swap');
 
   *{
    margin: 0;
@@ -24,28 +22,28 @@
    background: whitesmoke;
  }
  
- 
  .delete-card{
  position: absolute;
- padding-left: 5px; /* Adjust as needed */
-   top: 2px; /* Adjust the top position as needed */
-   right: 70px; /* Adjust the right position as needed */
+ padding-left: 5px; 
+   top: 2px; 
+   right: 70px; 
    padding: 8px;
-   background-color: transparent; /* Adjust button color as needed */
+   background-color: transparent; 
    outline: #1a1a1a;
    color: rgb(245, 62, 65);
    border: 1px;
    border-radius: 20px;
    cursor: pointer;
  }
+
  .edit-card {
    position: absolute;
-   padding-right: 5px; /* Adjust as needed */
+   padding-right: 5px; 
    padding-left: 100px;
-   top: 2px; /* Adjust the top position as needed */
-   right: 5px; /* Adjust the right position as needed */
+   top: 2px;
+   right: 5px;
    padding: 8px;
-   background-color: transparent; /* Adjust button color as needed */
+   background-color: transparent; 
    outline: #1a1a1a;
    color: rgb(29, 135, 241);
    border: 1px;
@@ -55,36 +53,33 @@
 
  .delete-card::before {
    right: 20px;
-   padding-left: 10px; /* Adjust as needed */
-   content: "\f2ed"; /* Unicode for the trash icon in Font Awesome */
-   font-family: "Font Awesome 5 Free"; /* Font family for Font Awesome */
-   font-weight: 900; /* Font weight for Font Awesome */
+   padding-left: 10px; 
+   content: "\f2ed"; 
+   font-family: "Font Awesome 5 Free"; 
+   font-weight: 900;
    position: relative;
-   left: -5px; /* Adjust as needed */
+   left: -5px; 
  }
  
  .edit-card::before {
-   content: "\f044"; /* Unicode for the edit icon in Font Awesome */
-   font-family: "Font Awesome 5 Free"; /* Font family for Font Awesome */
-   font-weight: 900; /* Font weight for Font Awesome */
+   content: "\f044";
+   font-family: "Font Awesome 5 Free"; 
+   font-weight: 900; 
    position: absolute;
-   left: -10px; /* Adjust as needed */
+   left: -10px; 
  }
- 
-
-
-
 
  button:hover{
    background-color: rgba(0, 0, 0, 0.1);
  }
  
- .container{
-   width: 1280px;
-   margin: auto;
- }
+ .container {
+  width: 100%;
+  padding: 0 20px;
+}
+
  
- header{background-color: white;}
+header{background-color: white;}
  
  #header{
    display: flex;
@@ -130,7 +125,7 @@
    justify-content: center;
    align-items: center;
    flex-wrap: wrap;
-   width: 100%;
+   width: calc(100% - 20px);
    margin: auto;
    margin-top: 10px;
    padding: 0px 10px;
@@ -183,12 +178,7 @@
    #create_card{width: 95%;}
  
    .flashcard{width: 100%;}
- 
  }
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&family=Roboto:wght@100&display=swap');
-
-/* Your existing CSS code... */
-
 
 .flashcard {
    margin-top: 550px;
@@ -215,23 +205,29 @@
 }
 
 #prevButton {
+   position: sticky;
+   right: 65%;
    color: white;
    position: absolute;
-   left: 400px;
+   border-color: #1a1a1a;
+   margin-right: 90px;
    background-color: lightsalmon;
 }
 
 #nextButton{
+   left: 65%;
    position: sticky;
-   left: 1020px;
-   background-color:lightskyblue;
-   border: red;
+   color: white;
+   position: absolute;
+   margin-left: 90px;
+   border-color: #1a1a1a;
+   background-color: lightskyblue;
 }
 
-#show_card_box{
+#add_card_button{
    position: sticky;
    background-color:lightgreen;
-   border: red;
+
 
 }
 
@@ -239,6 +235,57 @@
    color: white;
    position: sticky;
    background-color:rgb(229, 29, 29);
-   border: red;
-
 }
+
+ #showAllCards {
+   position: sticky; 
+   bottom: 0; 
+   left: 45%;
+   transform: translateX(-50%);
+   margin-top: 250px;
+   border-color: #1a1a1a;
+   background-color: white;
+   color: blueviolet;
+   border-radius: 20px;
+ }
+
+#saveFiles {
+  background-color: blueviolet;
+  border-color: #1a1a1a;
+  border: 1px;
+  border-radius: 20px;
+  cursor: pointer;
+  left: 50%;
+  position: sticky;
+  color: white;
+  margin-top: 20px;
+}
+
+#uploadButton {
+  padding: 8px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background: red;
+  left: 50%;
+  margin-top: 20px; 
+}
+
+#uploadButton:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#footer {
+  display: flex;
+  justify-content:center;
+  position: fixed;
+  font-weight: bold;
+  bottom: 0;
+  width: 100%;
+  min-height: 70px;
+  padding: 20px;
+  background: rgb(250, 249, 249);
+  
+}
+
